@@ -21,19 +21,14 @@
 // Output: [0,1]
 
 const twoSum = (nums, target) => {
-    let newarray=[],value=0
-    for (let i = 0; i < nums.length; i++) {
-        for (let j = 0; j <=i; j++) {
-            value=(nums[i]+nums[j])
-            if(value==target){
-                console.log(i,j);
-                break;
-            }
-
+    let newarray=[],num=1;
+    for (let i = 0; i < nums.length - 1; i++) {
+        for (let j = num; j < nums.length; j++) {
+            (nums[i] + nums[j] == target)&&newarray.push(i,j);
         }
-
+        num++
     }
     return newarray;
 }
-let result = twoSum([2,5,5,11], 10)
+let result = twoSum([2,7,11,15], 9)
 console.log(result)
