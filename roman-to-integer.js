@@ -36,13 +36,19 @@
 // Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
 const toInteger=(romanNumber)=>{
-    let sum=0,value;
-    const [I,V,X,L,C,D,M]=[1,5,10,50,100,500,1000]
-    for(let i of romanNumber){
-        value=(i)
-       sum+=value;
+    let roman=romanNumber.split("")
+    let value=roman.reduce((a,c)=>{
+        const [I,V,X,L,C,D,M]=[1,5,10,50,100,500,1000]
+        if(a>c){
+            return a+c
+        }else{
+            return c+a
+        }
+        
     }
-    console.log(sum);
+    )
+    console.log(value)
+    
 }
 toInteger("MCMXCIV")
  // I             1
