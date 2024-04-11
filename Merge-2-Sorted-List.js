@@ -9,6 +9,7 @@
 // Output: [1,1,2,3,4,4]
 
 
+Merrge
 var mergeTwoLists = function(list1, list2) {
     const newArray=list1.concat(list2);
     newArray.sort((a,b)=>a-b)
